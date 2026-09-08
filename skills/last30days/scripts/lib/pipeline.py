@@ -2083,6 +2083,7 @@ def run(
         planner.validate_external_plan(external_plan)
         plan = planner._sanitize_plan(
             external_plan, topic, available, planner_requested_sources, depth,
+            honor_plan_sources=True,
         )
         plan_source = "external"
     else:
